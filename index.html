@@ -1,36 +1,115 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hanxsj — موقع جاهز على GitHub Pages</title>
-  <meta name="description" content="موقع بسيط مهيأ للنشر عبر GitHub Pages للمستودع Hanxsj" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writeflare — Portfolio</title>
+  <meta name="description" content="Aymane Aqertit — Freelance writer, translator and CV specialist based in Agadir, Morocco." />
+  <!-- Optional: add a favicon: <link rel="icon" href="/favicon.ico"> -->
   <style>
-    :root{--bg:#0f172a;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;min-height:100vh;background:linear-gradient(180deg,#071029 0%,#07122a 60%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:32px}
-    .card{max-width:880px;width:100%;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);padding:28px;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
-    h1{margin:0 0 8px 0;font-size:28px}
-    p{margin:0 0 16px;color:var(--muted)}
-    .links{display:flex;gap:12px;flex-wrap:wrap}
-    a.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021025;text-decoration:none;font-weight:600}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    code{background:#021226;padding:4px 8px;border-radius:6px;color:#8be9ff}
-    @media (max-width:600px){.card{padding:20px}h1{font-size:22px}}
+    :root{
+      --primary:#1f4e79;
+      --bg:#f4f6f9;
+      --card:#ffffff;
+      --muted:#556777;
+      --shadow: 0 6px 18px rgba(16,32,48,0.08);
+    }
+    html,body{height:100%}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    header{
+      background:var(--primary);
+      color:white;
+      padding:40px 20px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:clamp(28px,4vw,40px);letter-spacing:1px}
+    header p{margin:10px 0 16px;color:rgba(255,255,255,0.9)}
+    .container{max-width:920px;margin:20px auto;padding:0 16px}
+    .card{
+      background:var(--card);
+      padding:20px;
+      margin-top:15px;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+    }
+    h2{color:var(--primary);margin:0 0 10px 0}
+    ul{margin:0 0 0 18px;padding:0}
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:15px;
+      margin-top:30px;
+    }
+    .btn{
+      display:inline-block;color:white;background:var(--primary);
+      padding:10px 14px;text-decoration:none;border-radius:6px;font-weight:600;
+      transition:transform .12s ease,box-shadow .12s ease;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,78,121,0.12)}
+    .contact-list p{margin:6px 0}
+    @media (prefers-color-scheme:dark){
+      :root{--bg:#071029;--card:#071428;color:#e6eef6}
+      body{background:linear-gradient(180deg,#071029,#07122a)}
+      footer{background:#05060a}
+    }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>مرحبًا — هذا موقع مستودع Hanxsj</h1>
-    <p>تم إنشاء صفحة ثابتة جاهزة للنشر عبر GitHub Pages. يمكنك تعديل هذه الصفحة في المستودع <code>Aymanissi/Hanxsj</code> لتخصيص المحتوى أو رفع موقع أكبر.</p>
+  <header role="banner">
+    <h1>WRITEFLARE</h1>
+    <p>Freelance Writer | Translator | CV Specialist</p>
+    <p><a class="btn" href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer">Hire Me on Fiverr</a></p>
+  </header>
 
-    <div class="links">
-      <a class="btn" href="https://github.com/Aymanissi/Hanxsj" target="_blank" rel="noopener">عرض المستودع على GitHub</a>
-      <a class="btn" href="https://github.com/Aymanissi" target="_blank" rel="noopener">صفحة الملف الشخصي</a>
-    </div>
+  <main class="container" role="main">
+    <section aria-labelledby="about">
+      <h2 id="about">About Me</h2>
+      <div class="card">
+        <p>I am <strong>Aymane Aqertit</strong>, a freelance writer and translator based in Agadir, Morocco. I offer CV writing, translation, and content writing in Arabic, English, and French.</p>
+      </div>
+    </section>
 
-    <footer>
-      لاحقًا: أستطيع إعداد صفحات متعددة، إضافة CSS وصور، أو تفعيل نشر من مجلد <code>/docs</code> أو من فرع مخصص. هل تود أن أنشر هذا مباشرة على GitHub Pages؟
-    </footer>
+    <section aria-labelledby="services">
+      <h2 id="services">Services</h2>
+      <div class="card">
+        <ul>
+          <li>CV Writing</li>
+          <li>Translation (AR / EN / FR)</li>
+          <li>Content Writing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="samples">
+      <h2 id="samples">Portfolio Samples</h2>
+      <div class="card">
+        <p><strong>CV Writing:</strong> Professional CV sample</p>
+        <p><strong>Translation:</strong> I am a hardworking student → Je suis un étudiant travailleur</p>
+        <p><strong>Writing:</strong> Short professional paragraph sample</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <div class="card contact-list">
+        <p>Email: <a href="mailto:aaqertit650@gmail.com">aaqertit650@gmail.com</a></p>
+        <p>Phone: <a href="tel:+212639066199">+212 639 066 199</a></p>
+        <p>Location: Agadir, Morocco</p>
+      </div>
+    </section>
   </main>
+
+  <footer role="contentinfo">
+    <p>© Writeflare</p>
+  </footer>
 </body>
 </html>
